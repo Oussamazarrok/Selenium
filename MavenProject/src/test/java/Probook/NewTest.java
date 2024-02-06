@@ -80,7 +80,7 @@ public class NewTest {
   public void beforeMethod() {
 	  String browser = "firefox";
 	  			if (browser.equalsIgnoreCase("firefox")) {
-	  				System.setProperty("webdriver.gecko.driver", "/user/local/bin/geckodriver.exe");
+	  				System.setProperty("webdriver.gecko.driver", "/user/local/bin/geckodriver");
 	  				FirefoxOptions options = new FirefoxOptions();
 	  				options.addArguments("--headless");
 	  				driver = new FirefoxDriver(options);
