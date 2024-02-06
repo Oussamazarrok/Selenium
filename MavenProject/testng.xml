@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Ma première suite de test">
+	<test name="Mon premier test">
+		<parameter name="browser" value="chrome"/>
+		<classes>
+			<class name="TestNG.NewTest"/>
+		</classes>
+	</test>
+	<test name="Mon premier test firefox">
+		<parameter name="browser" value="firefox"/>
+		<classes>
+			<class name="TestNG.NewTest"/>
+		</classes>
+	</test>
+	<test name="Mon premier test Edge">
+		<parameter name="browser" value="edge"/>
+		<classes>
+			<class name="TestNG.NewTest"/>
+		</classes>
+	</test>
+</suite>
