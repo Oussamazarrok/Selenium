@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -79,7 +80,10 @@ public class NewTest {
   public void beforeMethod() {
 	  String browser = "firefox";
 	  			if (browser.equalsIgnoreCase("firefox")) {
-	  				System.setProperty("webdriver.gecko.driver", "D:\\eclipse\\drivers\\geckodriver\\geckodriver.exe");
+	  				System.setProperty("webdriver.gecko.driver", "/user/local/bin/geckodriver.exe");
+	  				FirefoxOptions options = new FirefoxOptions();
+	  				options.addArguments("--headless");
+	  				driver = new FirefoxDriver(options);
 	  				driver = new FirefoxDriver();
 	  			} else if (browser.equalsIgnoreCase("chrome")) {
 	  				System.setProperty("webdriver.chrome.driver", "D:\\eclipse\\drivers\\chromedriver\\chrome-win64\\chrome.exe");
